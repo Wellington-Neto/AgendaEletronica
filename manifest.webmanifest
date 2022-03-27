@@ -1,0 +1,12 @@
+{
+  "name": "Agenda Eletronica",
+  "short_name": "Agenda",
+  "start_url": "index.html",
+  "display": "standalone",
+  "description": "Ajuda no seu dia a dia ter controle sobre suas tarefas",
+  "icons": [{
+    "src": "Imagens/AgendaEletronicaIcon.png",
+    "sizes": "225x225",
+    "type": "image/png"
+  }]
+}
