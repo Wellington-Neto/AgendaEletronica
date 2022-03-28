@@ -7,9 +7,7 @@
   <title>Agenda Eletrônica</title>
   <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script>
-    navigator.serviceWorker.register('/sw.js')
-  </script>
+
 </head>
 
 <body>
@@ -17,28 +15,23 @@
     <link href="">Tarefas</link>
     <link href="">Notas</link>
     <link href="">Calendario</link>
-    <button class="add">+</button>
+    <button id="add" class="add">+</button>
   </div>
-  <div>
-  <form id="tarefas">
-  <input type="checkbox"></input>
-  <input type="text" name="tarefa" id="tarefa" autocomplete="off"/>
-  <button class="aceitarTarefa">V</button>
-  <button class="deletarTarefa">L</button>
-  <div id="box" class="box">
 
-  </div>
-  </form>
-    </div>
+  <Section>
+    <form id="tarefas" class="form">
+    </form>
+  </Section>
 
   <div>
     <button>+</button> Tarefas Concluidas
     <br>
-  <tr>
+  
   <td><input type="checkbox"></input></td>
   <td><input type="text"></input></td>
   </tr>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

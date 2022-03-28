@@ -1,16 +1,41 @@
+*{
+  padding: 0;
+  margin: 5PX;
+}
+
 .wow {
   width: 100px;
 }
 
 body{
-  background-color: dimgrey;
+  background-color: rgba(235, 231, 231, 0.959);
 }
-
-input{
-  width: 100%;
+.form{
+  width: 100% auto;
+}
+.text{
+  width: 97% auto;
   border:0;
   border-radius: 5px;
   padding: 10px 20px;
   opacity: .65;
   margin-top: 5px;
 }
+
+.marcarTarefa{
+  width: 3%;
+}
+
+.aceitarTarefa{
+  width: 5%;
+}
+
+.deletarTarefa{
+  width: 5%;
+}
+
+.box{
+padding: 0;
+margin: 0;
+}
+
