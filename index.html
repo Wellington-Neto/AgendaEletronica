@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Agenda Eletrônica</title>
-  <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />    
+    <link rel="stylesheet" href="style.css">
     <script>
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('sw.js')
     </script>
-
+<script src="index.js"></script>
 </head>
 
 <body>
@@ -18,10 +18,10 @@
     <link href="">Tarefas</link>
     <link href="">Notas</link>
     <link href="">Calendario</link>
-    <button id="add" class="add">+</button>
+    <button onclick = "addButton()" class="add">+</button>
   </div>
 
-  <Section>
+  <Section>    
     <form id="tarefas" class="form">
     </form>
   </Section>
@@ -34,7 +34,6 @@
   <td><input type="text"></input></td>
   </tr>
   </div>
-  <script src="script.js"></script>
+  
 </body>
-
 </html>

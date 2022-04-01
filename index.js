@@ -3,14 +3,14 @@ var btn_addTarefa = document.getElementById('addTarefa');
 var btn_excluirTarefa = document.getElementById('removerTarefa');
 var form = document.getElementById('tarefas');
 
-btn_add.addEventListener('click', function(){
+function addButton(){
     createCheckBox();
     createImput();
     createBtnAceitar();
     createBtnRemover();
     createBr();
     
-});
+};
 
 
 //<input type="text" name="tarefa" id="tarefa" class="text" autocomplete="off"/>
