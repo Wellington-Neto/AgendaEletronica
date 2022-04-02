@@ -3,14 +3,14 @@ var btn_addTarefa = document.getElementById('addTarefa');
 var btn_excluirTarefa = document.getElementById('removerTarefa');
 var form = document.getElementById('tarefas');
 
-function addButton(){
+btn_add.addEventListener("click", function(){
     createCheckBox();
     createImput();
     createBtnAceitar();
     createBtnRemover();
     createBr();
     
-};
+});
 
 
 //<input type="text" name="tarefa" id="tarefa" class="text" autocomplete="off"/>
@@ -43,7 +43,7 @@ function createBtnAceitar(){
     elemento.textContent = 'V';
 
     form.appendChild(elemento);
-}
+};
 
 //<button for="tarefa" class="deletarTarefa">L</button>
 function createBtnRemover(){
@@ -52,9 +52,9 @@ function createBtnRemover(){
     elemento.setAttribute('class', 'deletarTarefa');
     elemento.textContent = 'L';
     form.appendChild(elemento);
-}
+};
 
 function createBr(){
     var elemento = document.createElement('br');
     form.appendChild(elemento);
-}
+};
