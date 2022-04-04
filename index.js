@@ -1,8 +1,7 @@
 var btn_add = document.getElementById('add');
-var btn_addTarefa = document.getElementById('addTarefa');
-var btn_excluirTarefa = document.getElementById('removerTarefa');
 var form = document.getElementById('tarefas');
-
+var listaTarefas = [];
+var count = 0;
 btn_add.addEventListener("click", function(){
     createCheckBox();
     createImput();
@@ -11,14 +10,17 @@ btn_add.addEventListener("click", function(){
     createBr();
     
 });
-
+ 
+function addTarefa(info){
+    listaTarefas[info] = document.getElementById('tarefa' + count)
+}
 
 //<input type="text" name="tarefa" id="tarefa" class="text" autocomplete="off"/>
 function createImput(){
     var elemento = document.createElement('input');
     elemento.setAttribute('type', 'text');
-    elemento.setAttribute('name', 'tarefa2');
-    elemento.setAttribute('id', 'tarefa2');
+    elemento.setAttribute('name', 'tarefa' + count);
+    elemento.setAttribute('id', 'tarefa' + count);
     elemento.setAttribute('autocomplete', 'off');
     elemento.setAttribute('class', 'text');
     
@@ -29,7 +31,7 @@ function createImput(){
 function createCheckBox(){
     var elemento = document.createElement('input');
     elemento.setAttribute('type', 'checkbox');
-    elemento.setAttribute('for', 'tarefa2');
+    elemento.setAttribute('for', 'tarefa' + count);
     elemento.setAttribute('class', 'marcarTarefa');
 
     form.appendChild(elemento);
@@ -38,8 +40,11 @@ function createCheckBox(){
 // <button for="tarefa" class="aceitarTarefa">V</button>
 function createBtnAceitar(){
     var elemento = document.createElement('button');
-    elemento.setAttribute('for', 'tarefa2');
-    elemento.setAttribute('class', 'aceitarTarefa');
+    elemento.setAttribute('for', 'tarefa' + count);
+    elemento.setAttribute('id', 'aceitarTarefa' + count);
+    elemento.setAttribute('class', 'aceitarTarefa' + count);
+    elemento.setAttribute('onclick', count)
+    elemento.setAttribute('type', "submit")
     elemento.textContent = 'V';
 
     form.appendChild(elemento);
@@ -48,8 +53,9 @@ function createBtnAceitar(){
 //<button for="tarefa" class="deletarTarefa">L</button>
 function createBtnRemover(){
     var elemento = document.createElement('button');
-    elemento.setAttribute('for', 'tarefa2');
-    elemento.setAttribute('class', 'deletarTarefa');
+    elemento.setAttribute('for', 'tarefa'+ count);
+    elemento.setAttribute('id', 'deletarTarefa' + count);
+    elemento.setAttribute('class', 'deletarTarefa' + count);
     elemento.textContent = 'L';
     form.appendChild(elemento);
 };
@@ -57,4 +63,5 @@ function createBtnRemover(){
 function createBr(){
     var elemento = document.createElement('br');
     form.appendChild(elemento);
+    count++;
 };
