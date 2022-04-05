@@ -1,0 +1,1 @@
+Este aplicativo consiste em uma agenda de tarefas e Anotações, na primeira página você pode clicar tarefa e marca como concluído, segunda tela você pode deixar anotações salvas. E um aplicativo muito intuitivo e em PWA. Basta clicar no + e pronto sua tarefa ou anotação esta sendo criada e logo em seguida salve para que guarda estas informações.
